@@ -9,6 +9,7 @@ mongo.connect(url, function(err, db) {
     parrots.find({
         age: {
             $gt: +age
+            //解答的 + 代表轉型的意思(字串變數字), 但是如果你輸入 ‘-’ 就真得變成負數了
         }
     }).toArray(function(err, docs) {
         if (err) throw err
